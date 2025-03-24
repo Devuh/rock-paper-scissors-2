@@ -47,32 +47,3 @@ function playRound(computerChoice, humanChoice) {
 selection.addEventListener("click", (event) => {
     playRound(getComputerChoice(), event.target.textContent);
 });
-
-/*
-function playGame() {
-    let humanScore = 0;
-    let computerScore = 0;
-
-    for(let i = 0; humanScore < 5 && computerScore < 5; i++) {
-        let result = playRound(getComputerChoice(), getHumanChoice());
-        switch(result) {
-            case "loss":
-                computerScore++;
-                break;
-            case "win":
-                humanScore++;
-                break;
-        }
-    }
-
-    if(humanScore > computerScore) {
-        console.log(`You won the game ${humanScore} to ${computerScore}, congrats!`);
-    } else if (humanScore < computerScore) {
-        console.log(`You lost the game ${humanScore} to ${computerScore}, better luck next time!`);
-    } else {
-        console.log(`Game tied ${humanScore} to ${computerScore}. Try again?`);
-    }
-}
-
-playGame();
-*/
