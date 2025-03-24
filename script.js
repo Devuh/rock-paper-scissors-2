@@ -13,6 +13,7 @@ function getComputerChoice() {
     }
 }
 
+/*
 function getHumanChoice(display = "Rock, Paper, Scissors?") {
     let choice = prompt(display).toLowerCase();
     if(choice === "rock" || choice === "paper" || choice === "scissors") {
@@ -22,6 +23,9 @@ function getHumanChoice(display = "Rock, Paper, Scissors?") {
         return getHumanChoice("I'm sorry, that wasn't a valid option, please try again.");
     }
 }
+*/
+
+const selection = document.querySelector(".buttons");
 
 function playRound(computerChoice, humanChoice) {
     if(computerChoice === humanChoice) {
@@ -38,6 +42,11 @@ function playRound(computerChoice, humanChoice) {
     }
 }
 
+selection.addEventListener("click", (event) => {
+    playRound(getComputerChoice(), event.target.textContent);
+});
+
+/*
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
@@ -64,3 +73,4 @@ function playGame() {
 }
 
 playGame();
+*/
